@@ -98,7 +98,7 @@ public class AdminClient {
         SocketDestination destination = new SocketDestination(node.getHost(),
                                                               node.getSocketPort(),
                                                               RequestFormatType.ADMIN);
-        SocketAndStreams sands = pool.checkout(destination);
+        SocketAndStreams sands = pool.checkout(destination); 
         try {
             DataOutputStream outputStream = sands.getOutputStream();
             outputStream.writeByte(VoldemortOpCode.UPDATE_METADATA_OP_CODE);
